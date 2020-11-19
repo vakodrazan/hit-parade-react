@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Someone You Loved",
+        "name": "Lewis Capaldi",
+        "id": 3814752468,
+        "lyrics": "I'm going under and this time I fear there's no one to save me",
+        "style": "Pop",
+        "isFavorite": false,
+        "upvote": 7,
+        "downvote": 2
+    },
+    {
+        "title": "Overcomer",
+        "name": "Mandisa",
+        "id": 332574,
+        "lyrics": "Staring at a stop sign",
+        "style": "CEDM; ‎R&B",
+        "isFavorite": false,
+        "upvote": 24,
+        "downvote": 4
+    },
+    {
+        "title": "High on Me",
+        "name": "Guy Sebastian",
+        "id": 88644668004,
+        "lyrics": "Oh, you need to slow it down, get on my vibe",
+        "style": "Pop",
+        "isFavorite": false,
+        "upvote": 6,
+        "downvote": 3
+    },
+    {
+        "title": "Tiako ianao",
+        "name": "Fy Rasolofoniaina",
+        "id": 11198,
+        "lyrics": "Kalo, nofy, tsiky ",
+        "style": "Hiram-pitiavana",
+        "isFavorite": false,
+        "upvote": 11,
+        "downvote": 5
+    }
+]
