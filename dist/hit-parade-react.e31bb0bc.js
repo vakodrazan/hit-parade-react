@@ -33968,10 +33968,38 @@ function ContextProvider({
     setAllSongs(newSongArr);
   }
 
+  function toggleUpvote(id) {
+    const updateSong = allSongs.map(song => {
+      if (song.id === id) {
+        return { ...song,
+          upvote: song.upvote + 1
+        };
+      }
+
+      return song;
+    });
+    setAllSongs(updateSong);
+  }
+
+  function toggleDownvote(id) {
+    const updateSong = allSongs.map(song => {
+      if (song.id === id) {
+        return { ...song,
+          downvote: song.downvote + 1
+        };
+      }
+
+      return song;
+    });
+    setAllSongs(updateSong);
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       allSongs,
-      toggleFavourite
+      toggleFavourite,
+      toggleUpvote,
+      toggleDownvote
     }
   }, children);
 }
@@ -33995,7 +34023,9 @@ function SongList({
   song
 }) {
   const {
-    toggleFavourite
+    toggleFavourite,
+    toggleUpvote,
+    toggleDownvote
   } = (0, _react.useContext)(_Context.Context);
 
   function favouriteIcon() {
@@ -34015,8 +34045,10 @@ function SongList({
   return /*#__PURE__*/_react.default.createElement("section", {
     className: "song-list"
   }, /*#__PURE__*/_react.default.createElement("span", null, favouriteIcon()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: () => toggleUpvote(song.id),
     className: "ri-arrow-up-line"
   })), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.downvote), /*#__PURE__*/_react.default.createElement("i", {
+    onClick: () => toggleDownvote(song.id),
     className: "ri-arrow-down-line fav"
   })), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-shopping-cart-2-line"

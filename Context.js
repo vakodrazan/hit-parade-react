@@ -16,7 +16,35 @@ function ContextProvider({children}) {
         setAllSongs(newSongArr)
     }
 
-    return <Context.Provider value={{allSongs, toggleFavourite}}>
+    function toggleUpvote(id) {
+        const updateSong = allSongs.map(song => {
+            if (song.id === id) {
+                return {...song, upvote: song.upvote + 1}
+            }
+            return song;
+        })
+        setAllSongs(updateSong)
+    }
+
+    function toggleDownvote(id) {
+        const updateSong = allSongs.map(song => {
+            if (song.id === id) {
+                return {...song, downvote: song.downvote + 1}
+            }
+            return song;
+        })
+        setAllSongs(updateSong)
+    }
+
+
+    return <Context.Provider 
+        value={{
+            allSongs, 
+            toggleFavourite, 
+            toggleUpvote, 
+            toggleDownvote
+        }}
+    >
         {children}
     </Context.Provider>
 }

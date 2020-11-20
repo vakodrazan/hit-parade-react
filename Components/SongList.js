@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { Context } from '../Context'
 
 function SongList({song}) {
-    const { toggleFavourite} = useContext(Context);
+    const { toggleFavourite, toggleUpvote, toggleDownvote } = useContext(Context);
 
     function favouriteIcon() {
         if (song.isFavorite) {
@@ -33,11 +33,11 @@ function SongList({song}) {
             </div>
             <p>
                 <span>{song.upvote}</span>
-                <i className="ri-arrow-up-line"></i>
+                <i onClick={() => toggleUpvote(song.id)} className="ri-arrow-up-line"></i>
             </p>
             <p>
                 <span>{song.downvote}</span>
-                <i className="ri-arrow-down-line fav"></i>
+                <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line fav"></i>
             </p>
             <span>
                 <i className="ri-shopping-cart-2-line"></i>
