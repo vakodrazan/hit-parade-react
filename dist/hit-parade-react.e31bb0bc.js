@@ -33853,7 +33853,55 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"Components/Header.js":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"Components/Add.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Add() {
+  return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Title"
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Artist"
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    type: "number",
+    placeholder: "Price"
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", null, /*#__PURE__*/_react.default.createElement("option", {
+    value: ""
+  }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Salegy"
+  }, "Salegy"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Reggae"
+  }, "Reggae"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Folk"
+  }, "Folk"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Rap"
+  }, "Rap"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Pop"
+  }, "Pop"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "CEDM; \u200ER&B"
+  }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Hiram-pitiavana"
+  }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+    type: "text",
+    placeholder: "Lyrics"
+  })), /*#__PURE__*/_react.default.createElement("button", {
+    type: "submit"
+  }, "Add"));
+}
+
+var _default = Add;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"Components/Header.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34270,6 +34318,8 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
+var _Add = _interopRequireDefault(require("./Components/Add"));
+
 var _Header = _interopRequireDefault(require("./Components/Header"));
 
 var _Styles = _interopRequireDefault(require("./Components/Styles"));
@@ -34288,12 +34338,14 @@ function App() {
     path: "/cart"
   }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/styles"
-  }, /*#__PURE__*/_react.default.createElement(_Styles.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Styles.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/add"
+  }, /*#__PURE__*/_react.default.createElement(_Add.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Header":"Components/Header.js","./Components/Styles":"Components/Styles.js","./pages/Cart":"pages/Cart.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Add":"Components/Add.js","./Components/Header":"Components/Header.js","./Components/Styles":"Components/Styles.js","./pages/Cart":"pages/Cart.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
