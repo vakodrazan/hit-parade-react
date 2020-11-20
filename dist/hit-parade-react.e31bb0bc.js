@@ -33885,6 +33885,58 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/Styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Styles() {
+  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Salegy")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Reggae")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Folk")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Rap")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Rock")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Pop")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "CEDM; \u200ER&B")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Hiram-pitiavana")));
+}
+
+var _default = Styles;
+exports.default = _default;
 },{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songs.json":[function(require,module,exports) {
 module.exports = [{
   "title": "Someone You Love",
@@ -34220,6 +34272,8 @@ var _reactRouterDom = require("react-router-dom");
 
 var _Header = _interopRequireDefault(require("./Components/Header"));
 
+var _Styles = _interopRequireDefault(require("./Components/Styles"));
+
 var _Cart = _interopRequireDefault(require("./pages/Cart"));
 
 var _Songs = _interopRequireDefault(require("./pages/Songs"));
@@ -34232,12 +34286,14 @@ function App() {
     path: "/"
   }, /*#__PURE__*/_react.default.createElement(_Songs.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/cart"
-  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/styles"
+  }, /*#__PURE__*/_react.default.createElement(_Styles.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Header":"Components/Header.js","./pages/Cart":"pages/Cart.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Header":"Components/Header.js","./Components/Styles":"Components/Styles.js","./pages/Cart":"pages/Cart.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
