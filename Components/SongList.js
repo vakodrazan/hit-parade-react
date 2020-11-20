@@ -9,13 +9,17 @@ function SongList({song}) {
             return (
                 <i 
                     onClick={() => toggleFavourite(song.id)}
-                    className="ri-heart-fill"
+                    className="ri-heart-fill icon-fill"
                 ></i>
             )
         }
-        return <i onClick={() => toggleFavourite(song.id)} className="ri-heart-line"></i>
+        return (
+            <i 
+                onClick={() => toggleFavourite(song.id)} 
+                className="ri-heart-line icon-fill"
+            ></i>
+        )
     }
-    favouriteIcon()
 
     return (
         <section className="song-list">

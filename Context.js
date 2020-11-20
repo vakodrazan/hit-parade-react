@@ -14,7 +14,6 @@ function ContextProvider({children}) {
             return song;
         })
         setAllSongs(newSongArr)
-        // console.log(id);
     }
 
     return <Context.Provider value={{allSongs, toggleFavourite}}>

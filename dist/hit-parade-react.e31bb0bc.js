@@ -33965,7 +33965,7 @@ function ContextProvider({
 
       return song;
     });
-    setAllSongs(newSongArr); // console.log(id);
+    setAllSongs(newSongArr);
   }
 
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
@@ -34002,17 +34002,16 @@ function SongList({
     if (song.isFavorite) {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: () => toggleFavourite(song.id),
-        className: "ri-heart-fill"
+        className: "ri-heart-fill icon-fill"
       });
     }
 
     return /*#__PURE__*/_react.default.createElement("i", {
       onClick: () => toggleFavourite(song.id),
-      className: "ri-heart-line"
+      className: "ri-heart-line icon-fill"
     });
   }
 
-  favouriteIcon();
   return /*#__PURE__*/_react.default.createElement("section", {
     className: "song-list"
   }, /*#__PURE__*/_react.default.createElement("span", null, favouriteIcon()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {
