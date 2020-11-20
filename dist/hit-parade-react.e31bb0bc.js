@@ -33861,21 +33861,37 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Add() {
+  const [title, setTitle] = (0, _react.useState)("");
+  const [artist, setArtist] = (0, _react.useState)("");
+  const [price, setPrice] = (0, _react.useState)();
+  const [style, setStyle] = (0, _react.useState)("");
+  const [lyrics, setLyrics] = (0, _react.useState)("");
   return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    value: title,
+    onChange: e => setTitle(e.target.value),
     type: "text",
     placeholder: "Title"
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    value: artist,
+    onChange: e => setArtist(e.target.value),
     type: "text",
     placeholder: "Artist"
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    value: price,
+    onChange: e => setPrice(e.target.value),
     type: "number",
     placeholder: "Price"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", null, /*#__PURE__*/_react.default.createElement("option", {
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
+    value: style,
+    onChange: e => setStyle(e.target.value)
+  }, /*#__PURE__*/_react.default.createElement("option", {
     value: ""
   }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Salegy"
@@ -33892,6 +33908,8 @@ function Add() {
   }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Hiram-pitiavana"
   }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+    value: lyrics,
+    onChange: e => setLyrics(e.target.value),
     type: "text",
     placeholder: "Lyrics"
   })), /*#__PURE__*/_react.default.createElement("button", {

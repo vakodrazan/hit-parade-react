@@ -1,19 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Add() {
+    const [title, setTitle] = useState("")
+    const [artist, setArtist] = useState("")
+    const [price, setPrice] = useState()
+    const [style, setStyle] = useState("")
+    const [lyrics, setLyrics] = useState("")
     return (
         <form>
             <fieldset>
-                <input type="text" placeholder="Title"/>
+                <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Title"/>
             </fieldset>
             <fieldset>
-                <input type="text" placeholder="Artist"/>
+                <input value={artist} onChange={(e) => setArtist(e.target.value)} type="text" placeholder="Artist"/>
             </fieldset>
             <fieldset>
-                <input type="number" placeholder="Price"/>
+                <input value={price} onChange={(e) => setPrice(e.target.value)} type="number" placeholder="Price"/>
             </fieldset>
             <fieldset>
-                <select>
+                <select value={style} onChange={(e) => setStyle(e.target.value)}>
                     <option value="">Style</option>
                     <option value="Salegy">Salegy</option>
                     <option value="Reggae">Reggae</option>
@@ -25,7 +30,7 @@ function Add() {
                 </select>
             </fieldset>
             <fieldset>
-                <textarea type="text" placeholder="Lyrics" />
+                <textarea value={lyrics} onChange={(e) => setLyrics(e.target.value)} type="text" placeholder="Lyrics" />
             </fieldset>
             <button type="submit">Add</button>
         </form>
