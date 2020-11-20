@@ -1,13 +1,14 @@
 [
     {
-        "title": "Someone You Loved",
+        "title": "Someone You Love",
         "name": "Lewis Capaldi",
         "id": 3814752468,
         "lyrics": "I'm going under and this time I fear there's no one to save me",
         "style": "Pop",
         "isFavorite": false,
         "upvote": 7,
-        "downvote": 2
+        "downvote": 2,
+        "price": 3900
     },
     {
         "title": "Overcomer",
@@ -17,7 +18,8 @@
         "style": "CEDM; ‎R&B",
         "isFavorite": false,
         "upvote": 24,
-        "downvote": 4
+        "downvote": 4,
+        "price": 28500
     },
     {
         "title": "High on Me",
@@ -27,7 +29,8 @@
         "style": "Pop",
         "isFavorite": false,
         "upvote": 6,
-        "downvote": 3
+        "downvote": 3,
+        "price": 21000
     },
     {
         "title": "Tiako ianao",
@@ -37,6 +40,7 @@
         "style": "Hiram-pitiavana",
         "isFavorite": false,
         "upvote": 11,
-        "downvote": 5
+        "downvote": 5,
+        "price": 5000
     }
 ]
