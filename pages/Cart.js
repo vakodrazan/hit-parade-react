@@ -16,10 +16,12 @@ function Cart() {
         }, 1000);
     }
 
+    const total = cartItem.reduce((prevPrice, songPrice) => prevPrice + songPrice.price, 0);
+
     return (
         <div>
             {songItem}
-            <p>Total: </p>
+            <p>Total: {total} Ar</p>
             {cartItem.length > 0 
                 ? <button onClick={handleBuy} >{buyBtnText}</button>  
                 : <p>You have no song in your cart!</p>

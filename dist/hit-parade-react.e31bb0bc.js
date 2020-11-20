@@ -34093,7 +34093,8 @@ function Cart() {
     }, 1000);
   }
 
-  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", null, "Total: "), cartItem.length > 0 ? /*#__PURE__*/_react.default.createElement("button", {
+  const total = cartItem.reduce((prevPrice, songPrice) => prevPrice + songPrice.price, 0);
+  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", null, "Total: ", total, " Ar"), cartItem.length > 0 ? /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleBuy
   }, buyBtnText) : /*#__PURE__*/_react.default.createElement("p", null, "You have no song in your cart!"));
 }
