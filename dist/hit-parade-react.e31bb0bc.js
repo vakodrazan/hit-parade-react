@@ -33855,14 +33855,15 @@ if ("development" !== "production") {
 }
 },{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"songs.json":[function(require,module,exports) {
 module.exports = [{
-  "title": "Someone You Loved",
+  "title": "Someone You Love",
   "name": "Lewis Capaldi",
   "id": 3814752468,
   "lyrics": "I'm going under and this time I fear there's no one to save me",
   "style": "Pop",
   "isFavorite": false,
   "upvote": 7,
-  "downvote": 2
+  "downvote": 2,
+  "price": 3900
 }, {
   "title": "Overcomer",
   "name": "Mandisa",
@@ -33871,7 +33872,8 @@ module.exports = [{
   "style": "CEDM; ‎R&B",
   "isFavorite": false,
   "upvote": 24,
-  "downvote": 4
+  "downvote": 4,
+  "price": 28500
 }, {
   "title": "High on Me",
   "name": "Guy Sebastian",
@@ -33880,7 +33882,8 @@ module.exports = [{
   "style": "Pop",
   "isFavorite": false,
   "upvote": 6,
-  "downvote": 3
+  "downvote": 3,
+  "price": 21000
 }, {
   "title": "Tiako ianao",
   "name": "Fy Rasolofoniaina",
@@ -33889,7 +33892,8 @@ module.exports = [{
   "style": "Hiram-pitiavana",
   "isFavorite": false,
   "upvote": 11,
-  "downvote": 5
+  "downvote": 5,
+  "price": 5000
 }];
 },{}],"Context.js":[function(require,module,exports) {
 "use strict";
