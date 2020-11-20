@@ -49,6 +49,9 @@ function ContextProvider({children}) {
     function removeFromCart(songId) {
         setCartItem(prevItems => prevItems.filter(item => item.id !== songId));
     }
+    function emptyCart() {
+        setCartItem([])
+    }
 
 
     return <Context.Provider 
@@ -59,7 +62,8 @@ function ContextProvider({children}) {
             toggleDownvote,
             cartItem,
             addToCart,
-            removeFromCart
+            removeFromCart,
+            emptyCart
         }}
     >
         {children}

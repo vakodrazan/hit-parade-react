@@ -34007,6 +34007,10 @@ function ContextProvider({
     setCartItem(prevItems => prevItems.filter(item => item.id !== songId));
   }
 
+  function emptyCart() {
+    setCartItem([]);
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       allSongs,
@@ -34015,7 +34019,8 @@ function ContextProvider({
       toggleDownvote,
       cartItem,
       addToCart,
-      removeFromCart
+      removeFromCart,
+      emptyCart
     }
   }, children);
 }
@@ -34071,13 +34076,26 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function Cart() {
   const {
-    cartItem
+    cartItem,
+    emptyCart
   } = (0, _react.useContext)(_Context.Context);
+  const [buyBtnText, setBuyBtnText] = (0, _react.useState)("Buy");
   const songItem = cartItem.map(song => /*#__PURE__*/_react.default.createElement(_CartItem.default, {
     key: song.id,
     song: song
   }));
-  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", null, "Total: "), /*#__PURE__*/_react.default.createElement("button", null, "Buy"));
+
+  function handleBuy() {
+    setBuyBtnText("In process...");
+    setTimeout(() => {
+      emptyCart();
+      setBuyBtnText("Buy");
+    }, 1000);
+  }
+
+  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", null, "Total: "), cartItem.length > 0 ? /*#__PURE__*/_react.default.createElement("button", {
+    onClick: handleBuy
+  }, buyBtnText) : /*#__PURE__*/_react.default.createElement("p", null, "You have no song in your cart!"));
 }
 
 var _default = Cart;
