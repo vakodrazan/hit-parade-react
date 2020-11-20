@@ -2,7 +2,14 @@ import React, { useContext } from 'react'
 import { Context } from '../Context'
 
 function SongList({song}) {
-    const { toggleFavourite, toggleUpvote, toggleDownvote } = useContext(Context);
+    const { 
+        toggleFavourite, 
+        toggleUpvote, 
+        toggleDownvote, 
+        cartItem,
+        addToCart,
+        removeFromCart
+    } = useContext(Context);
 
     function favouriteIcon() {
         if (song.isFavorite) {
@@ -17,6 +24,24 @@ function SongList({song}) {
             <i 
                 onClick={() => toggleFavourite(song.id)} 
                 className="ri-heart-line icon-fill"
+            ></i>
+        )
+    }
+
+    function cartIcon() {
+        const isALreadyInCart = cartItem.some(item => item.id === song.id)
+        if (isALreadyInCart) {
+            return (
+                <i 
+                    onClick={() => removeFromCart(song.id)}
+                    className="ri-shopping-cart-2-fill"
+                ></i>
+            )
+        }
+        return (
+            <i 
+                onClick={() => addToCart(song)} 
+                className="ri-shopping-cart-2-line"
             ></i>
         )
     }
@@ -40,7 +65,7 @@ function SongList({song}) {
                 <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line fav"></i>
             </p>
             <span>
-                <i className="ri-shopping-cart-2-line"></i>
+                {cartIcon()}
             </span>
             <span>
                 <i className="ri-more-fill"></i>
