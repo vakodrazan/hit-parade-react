@@ -1,9 +1,14 @@
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import songs from "./songs.json";
 
 const Context = React.createContext();
 
-function ContextProvider() {
-    const [allSongs, setAllSongs] = useState();
+function ContextProvider({children}) {
+    const [allSongs, setAllSongs] = useState(songs)
+
+    return <Context.Provider value={{allSongs}}>
+        {children}
+    </Context.Provider>
 }
 
-export {ContextProvider, Context}; 
+export {ContextProvider, Context}
