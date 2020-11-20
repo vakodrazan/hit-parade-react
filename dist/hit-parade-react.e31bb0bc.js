@@ -33870,7 +33870,7 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function Add() {
   const [title, setTitle] = (0, _react.useState)("");
   const [artist, setArtist] = (0, _react.useState)("");
-  const [price, setPrice] = (0, _react.useState)();
+  const [price, setPrice] = (0, _react.useState)("");
   const [style, setStyle] = (0, _react.useState)("");
   const [lyrics, setLyrics] = (0, _react.useState)("");
   return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
@@ -33886,7 +33886,7 @@ function Add() {
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
     value: price,
     onChange: e => setPrice(e.target.value),
-    type: "number",
+    type: "text",
     placeholder: "Price"
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
     value: style,
