@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import Header from './Components/Header';
 import SongList from './Components/SongList';
 import { Context } from './Context';
 
@@ -7,7 +8,7 @@ function App() {
 
     return (
         <div>
-            <h1>Hit Parade</h1>
+            <Header />
             <SongList />
         </div>
     )
