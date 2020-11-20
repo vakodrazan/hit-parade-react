@@ -6,7 +6,18 @@ const Context = React.createContext();
 function ContextProvider({children}) {
     const [allSongs, setAllSongs] = useState(songs)
 
-    return <Context.Provider value={{allSongs}}>
+    function toggleFavourite(id) {
+        const newSongArr = allSongs.map(song => {
+            if (song.id === id) {
+                return {...song, isFavorite: !song.isFavorite}
+            }
+            return song;
+        })
+        setAllSongs(newSongArr)
+        // console.log(id);
+    }
+
+    return <Context.Provider value={{allSongs, toggleFavourite}}>
         {children}
     </Context.Provider>
 }

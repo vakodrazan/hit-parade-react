@@ -1,15 +1,21 @@
 import React, { useContext } from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Header from './Components/Header';
 import SongList from './Components/SongList';
 import { Context } from './Context';
+import Songs from './pages/Songs';
 
 function App() {
-    // const { allSongs } = useContext(Context);
-
     return (
         <div>
             <Header />
-            <SongList />
+            <Songs />
+
+            <Switch>
+                <Route path='/style'>
+                    <h2>Hello</h2>
+                </Route>
+            </Switch>
         </div>
     )
 }
