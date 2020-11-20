@@ -4,9 +4,9 @@ import { Context } from '../Context'
 function SongList() {
     const {allSongs} = useContext(Context);
     return (
-        <div>
+        <article>
             {allSongs.map(song => (
-                <section key={song.id}>
+                <section key={song.id} className="song-list">
                     <span>
                         <i className="ri-heart-line"></i>
                     </span>
@@ -30,7 +30,7 @@ function SongList() {
                     </span>
                 </section>
             ))}
-        </div>
+        </article>
     )
 }
 

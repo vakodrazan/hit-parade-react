@@ -33944,8 +33944,9 @@ function SongList() {
   const {
     allSongs
   } = (0, _react.useContext)(_Context.Context);
-  return /*#__PURE__*/_react.default.createElement("div", null, allSongs.map(song => /*#__PURE__*/_react.default.createElement("section", {
-    key: song.id
+  return /*#__PURE__*/_react.default.createElement("article", null, allSongs.map(song => /*#__PURE__*/_react.default.createElement("section", {
+    key: song.id,
+    className: "song-list"
   }, /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-heart-line"
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {

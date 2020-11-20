@@ -1,0 +1,8 @@
+.song-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
