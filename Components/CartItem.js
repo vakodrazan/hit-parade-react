@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Context } from '../Context';
 
 function CartItem({song}) {
+    const { removeFromCart } = useContext(Context);
+
     return (
         <div>
-            <i className="ri-delete-bin-line"></i>
+            <i 
+                onClick={() => removeFromCart(song.id)} 
+                className="ri-delete-bin-line"
+            ></i>
             <div>
                 <h3>{song.title}</h3>
                 <span>{song.name}</span>
             </div>
-            <p>{song.pprice}</p>
+            <p>{song.price}</p>
         </div>
     )
 }
