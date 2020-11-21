@@ -34241,8 +34241,12 @@ function CartItem({
     className: "song-list section-layout"
   }, /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => removeFromCart(song.id),
-    className: "ri-delete-bin-line"
-  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, song.price));
+    className: "ri-delete-bin-line icon-lightblue"
+  }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", {
+    className: "artist"
+  }, song.name)), /*#__PURE__*/_react.default.createElement("p", {
+    className: "price"
+  }, song.price, " Ar"));
 }
 
 var _default = CartItem;
@@ -34287,8 +34291,13 @@ function Cart() {
   }
 
   const total = cartItem.reduce((prevPrice, songPrice) => prevPrice + songPrice.price, 0);
-  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", null, "Total: ", total, " Ar"), cartItem.length > 0 ? /*#__PURE__*/_react.default.createElement("button", {
-    onClick: handleBuy
+  return /*#__PURE__*/_react.default.createElement("div", null, songItem, /*#__PURE__*/_react.default.createElement("p", {
+    className: "total-price"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "total"
+  }, "Total:"), " ", total, " Ar"), cartItem.length > 0 ? /*#__PURE__*/_react.default.createElement("button", {
+    onClick: handleBuy,
+    className: "buybtn"
   }, buyBtnText) : /*#__PURE__*/_react.default.createElement("p", null, "You have no song in your cart!"));
 }
 

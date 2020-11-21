@@ -21,9 +21,9 @@ function Cart() {
     return (
         <div>
             {songItem}
-            <p>Total: {total} Ar</p>
+            <p className="total-price"><span className="total">Total:</span> {total} Ar</p>
             {cartItem.length > 0 
-                ? <button onClick={handleBuy} >{buyBtnText}</button>  
+                ? <button onClick={handleBuy} className="buybtn" >{buyBtnText}</button>  
                 : <p>You have no song in your cart!</p>
             }
         </div>

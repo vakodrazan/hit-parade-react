@@ -8,13 +8,13 @@ function CartItem({song}) {
         <div className="song-list section-layout">
             <i 
                 onClick={() => removeFromCart(song.id)} 
-                className="ri-delete-bin-line"
+                className="ri-delete-bin-line icon-lightblue"
             ></i>
             <div>
                 <h3>{song.title}</h3>
-                <span>{song.name}</span>
+                <span className="artist">{song.name}</span>
             </div>
-            <p>{song.price}</p>
+            <p className="price">{song.price} Ar</p>
         </div>
     )
 }

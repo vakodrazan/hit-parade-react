@@ -1,3 +1,24 @@
+body {
+    margin: 0;
+}
+
+.container {
+    padding: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 10px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+    padding-bottom: 1rem;
+}
+
 a {
     text-decoration: none;
 }
@@ -26,5 +47,41 @@ i {
 }
 
 .icon-lightblue {
+    font-size: 20px;
     color: #BAE8E8;
+}
+
+.total-price {
+    text-align: right;
+    font-size: 28px;
+}
+.total {
+    color: #BAE8E8;
+}
+
+.artist {
+    font-size: 18px;
+}
+.price {
+    font-size: 20px;
+    color: #FFD803;
+}
+
+.buybtn {
+    background-color: #FFD803;
+    padding: 10px 20px;
+    border: none;
+}
+
+.buybtn:hover {
+    outline: none;
+}
+
+
+
+@media(min-width: 650px) {
+    .container {
+        max-width: 750px;
+        margin: auto;
+    }
 }
