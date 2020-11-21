@@ -87,7 +87,7 @@ function ContextProvider({children}) {
         const form = e.target;
         const title = form.title.value;
         const name = form.name.value;
-        const price = form.price.value;
+        const price = Number(form.price.value);
         const style = form.style.value;
         const lyrics = form.lyrics.value;
 

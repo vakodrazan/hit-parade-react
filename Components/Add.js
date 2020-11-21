@@ -13,7 +13,7 @@ function Add() {
                 <input className="add-field" name="name" type="text" placeholder="Artist" required/>
             </fieldset>
             <fieldset>
-                <input className="add-field" name="price" type="text" placeholder="Price" required/>
+                <input className="add-field" name="price" type="number" placeholder="Price" required/>
             </fieldset>
             <fieldset>
                 <select className="add-field" name="style">
