@@ -53,6 +53,31 @@ function ContextProvider({children}) {
         setCartItem([])
     }
 
+    function addNewSong(e) {
+        e.preventDefault();
+        const form = e.target;
+        const title = form.title.value;
+        const name = form.name.value;
+        const price = form.price.value;
+        const style = form.style.value;
+        const lyrics = form.lyrics.value;
+
+        if (!title)  return;
+
+        const newSong = {
+            title,
+            name,
+            price,
+            style,
+            lyrics,
+            upvote: 0,
+            downvote: 0,
+            id: Date.now()
+        }
+        setAllSongs(prevSong => [...prevSong, newSong]);
+        e.target.reset();
+    }
+
 
     return <Context.Provider 
         value={{
@@ -63,7 +88,8 @@ function ContextProvider({children}) {
             cartItem,
             addToCart,
             removeFromCart,
-            emptyCart
+            emptyCart,
+            addNewSong
         }}
     >
         {children}

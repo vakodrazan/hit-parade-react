@@ -33853,157 +33853,7 @@ if ("development" !== "production") {
     style: _propTypes.default.object
   });
 }
-},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"Components/Add.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireWildcard(require("react"));
-
-function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
-
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
-function Add() {
-  const [title, setTitle] = (0, _react.useState)("");
-  const [artist, setArtist] = (0, _react.useState)("");
-  const [price, setPrice] = (0, _react.useState)("");
-  const [style, setStyle] = (0, _react.useState)("");
-  const [lyrics, setLyrics] = (0, _react.useState)("");
-  return /*#__PURE__*/_react.default.createElement("form", null, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
-    value: title,
-    onChange: e => setTitle(e.target.value),
-    type: "text",
-    placeholder: "Title"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
-    value: artist,
-    onChange: e => setArtist(e.target.value),
-    type: "text",
-    placeholder: "Artist"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
-    value: price,
-    onChange: e => setPrice(e.target.value),
-    type: "text",
-    placeholder: "Price"
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
-    value: style,
-    onChange: e => setStyle(e.target.value)
-  }, /*#__PURE__*/_react.default.createElement("option", {
-    value: ""
-  }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Salegy"
-  }, "Salegy"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Reggae"
-  }, "Reggae"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Folk"
-  }, "Folk"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Rap"
-  }, "Rap"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Pop"
-  }, "Pop"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "CEDM; \u200ER&B"
-  }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
-    value: "Hiram-pitiavana"
-  }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
-    value: lyrics,
-    onChange: e => setLyrics(e.target.value),
-    type: "text",
-    placeholder: "Lyrics"
-  })), /*#__PURE__*/_react.default.createElement("button", {
-    type: "submit"
-  }, "Add"));
-}
-
-var _default = Add;
-exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"Components/Header.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Header() {
-  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "song-list"
-  }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/"
-  }, "\uD83D\uDD25 Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, "\uD83D\uDC97 Styles ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/add"
-  }, "\uD83D\uDC83 Add ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/cart"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-shopping-cart-fill"
-  }), " Cart "))));
-}
-
-var _default = Header;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/Styles.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-
-var _react = _interopRequireDefault(require("react"));
-
-var _reactRouterDom = require("react-router-dom");
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function Styles() {
-  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Salegy")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Reggae")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Folk")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Rap")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Rock")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Pop")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "CEDM; \u200ER&B")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Hiram-pitiavana")));
-}
-
-var _default = Styles;
-exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"songs.json":[function(require,module,exports) {
+},{"react-router":"node_modules/react-router/esm/react-router.js","@babel/runtime/helpers/esm/inheritsLoose":"node_modules/@babel/runtime/helpers/esm/inheritsLoose.js","react":"node_modules/react/index.js","history":"node_modules/history/esm/history.js","prop-types":"node_modules/prop-types/index.js","tiny-warning":"node_modules/tiny-warning/dist/tiny-warning.esm.js","@babel/runtime/helpers/esm/extends":"node_modules/@babel/runtime/helpers/esm/extends.js","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js","tiny-invariant":"node_modules/tiny-invariant/dist/tiny-invariant.esm.js"}],"songs.json":[function(require,module,exports) {
 module.exports = [{
   "title": "Someone You Love",
   "name": "Lewis Capaldi",
@@ -34129,6 +33979,29 @@ function ContextProvider({
     setCartItem([]);
   }
 
+  function addNewSong(e) {
+    e.preventDefault();
+    const form = e.target;
+    const title = form.title.value;
+    const name = form.name.value;
+    const price = form.price.value;
+    const style = form.style.value;
+    const lyrics = form.lyrics.value;
+    if (!title) return;
+    const newSong = {
+      title,
+      name,
+      price,
+      style,
+      lyrics,
+      upvote: 0,
+      downvote: 0,
+      id: Date.now()
+    };
+    setAllSongs(prevSong => [...prevSong, newSong]);
+    e.target.reset();
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       allSongs,
@@ -34138,11 +34011,163 @@ function ContextProvider({
       cartItem,
       addToCart,
       removeFromCart,
-      emptyCart
+      emptyCart,
+      addNewSong
     }
   }, children);
 }
-},{"react":"node_modules/react/index.js","./songs.json":"songs.json"}],"Components/CartItem.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","./songs.json":"songs.json"}],"Components/Add.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function Add() {
+  const {
+    addNewSong
+  } = (0, _react.useContext)(_Context.Context);
+  return /*#__PURE__*/_react.default.createElement("form", {
+    onSubmit: addNewSong
+  }, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    name: "title",
+    type: "text",
+    placeholder: "Title",
+    required: true
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    name: "name",
+    type: "text",
+    placeholder: "Artist",
+    required: true
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    name: "price",
+    type: "text",
+    placeholder: "Price",
+    required: true
+  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
+    name: "style"
+  }, /*#__PURE__*/_react.default.createElement("option", {
+    value: ""
+  }, "Style"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Salegy"
+  }, "Salegy"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Reggae"
+  }, "Reggae"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Folk"
+  }, "Folk"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Rap"
+  }, "Rap"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Pop"
+  }, "Pop"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "CEDM; \u200ER&B"
+  }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Hiram-pitiavana"
+  }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+    name: "lyrics",
+    type: "text",
+    placeholder: "Lyrics",
+    required: true
+  })), /*#__PURE__*/_react.default.createElement("button", {
+    type: "submit"
+  }, "Add"));
+}
+
+var _default = Add;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","../Context":"Context.js"}],"Components/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Header() {
+  return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("div", {
+    className: "song-list"
+  }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, "\uD83D\uDD25 Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, "\uD83D\uDC97 Styles ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/add"
+  }, "\uD83D\uDC83 Add ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/cart"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-shopping-cart-fill"
+  }), " Cart "))));
+}
+
+var _default = Header;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/Styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Styles() {
+  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Salegy")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Reggae")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Folk")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Rap")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Rock")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Pop")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "CEDM; \u200ER&B")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/styles"
+  }, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), "Hiram-pitiavana")));
+}
+
+var _default = Styles;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/CartItem.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34407,7 +34432,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56406" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58032" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,24 +1,22 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { Context } from '../Context'
 
 function Add() {
-    const [title, setTitle] = useState("")
-    const [artist, setArtist] = useState("")
-    const [price, setPrice] = useState("")
-    const [style, setStyle] = useState("")
-    const [lyrics, setLyrics] = useState("")
+    const { addNewSong } = useContext(Context);
+
     return (
-        <form>
+        <form onSubmit={addNewSong}>
             <fieldset>
-                <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" placeholder="Title"/>
+                <input name="title" type="text" placeholder="Title" required/>
             </fieldset>
             <fieldset>
-                <input value={artist} onChange={(e) => setArtist(e.target.value)} type="text" placeholder="Artist"/>
+                <input name="name" type="text" placeholder="Artist" required/>
             </fieldset>
             <fieldset>
-                <input value={price} onChange={(e) => setPrice(e.target.value)} type="text" placeholder="Price"/>
+                <input name="price" type="text" placeholder="Price" required/>
             </fieldset>
             <fieldset>
-                <select value={style} onChange={(e) => setStyle(e.target.value)}>
+                <select name="style">
                     <option value="">Style</option>
                     <option value="Salegy">Salegy</option>
                     <option value="Reggae">Reggae</option>
@@ -30,7 +28,7 @@ function Add() {
                 </select>
             </fieldset>
             <fieldset>
-                <textarea value={lyrics} onChange={(e) => setLyrics(e.target.value)} type="text" placeholder="Lyrics" />
+                <textarea name="lyrics" type="text" placeholder="Lyrics"  required/>
             </fieldset>
             <button type="submit">Add</button>
         </form>
