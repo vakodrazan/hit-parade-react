@@ -24,7 +24,7 @@ function Add() {
                     <option value="Rap">Rap</option>
                     <option value="Pop">Pop</option>
                     <option value="CEDM; ‎R&B">CEDM; ‎R&B</option>
-                    <option value="Hiram-pitiavana">Hiram-pitiavana</option>
+                    <option value="Chirstian">Chirstian</option>
                     <option value="Slow">Slow</option>
                     <option value="Country">Country</option>
                     <option value="Rock">Rock</option>
