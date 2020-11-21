@@ -6,7 +6,6 @@ function StyleList() {
     const {styleName} = useParams();
     const {allSongs} = useContext(Context);
     const filterSameStyle = allSongs.filter(song => song.style === styleName);
-    console.log(filterSameStyle);
 
     return (
         <div>

@@ -34141,7 +34141,6 @@ function StyleList() {
     allSongs
   } = (0, _react.useContext)(_Context.Context);
   const filterSameStyle = allSongs.filter(song => song.style === styleName);
-  console.log(filterSameStyle);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-headphone-fill"
   }), styleName), filterSameStyle.map(item => /*#__PURE__*/_react.default.createElement("div", {
