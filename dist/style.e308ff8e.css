@@ -27,6 +27,12 @@ button {
     opacity: 0.8;
 }
 
+button:hover {
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, -3px 0px 9px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, -3px 0px 9px 5px rgba(0,0,0,0);
+    outline: none;
+}
+
 .section-layout {
     display: flex;
     flex-direction: row;
@@ -77,11 +83,6 @@ i {
     border: none;
 }
 
-.buybtn:hover {
-    outline: none;
-}
-
-
 
 @media(min-width: 650px) {
     .container {
@@ -91,12 +92,17 @@ i {
 }
 
 .add-form {
-    
+    background-color: rgb(253, 234, 253);
+    padding: 1rem;
+    border-radius: 5px;
+    -webkit-box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.57); 
+    box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.57);
 }
 
 fieldset {
     border: none;
-    max-width: 80%;
+    max-width: 90%;
+    padding: 1rem 0;
 }
 
 .add-field {
@@ -130,8 +136,5 @@ textarea {
     padding: 10px 20px;
 }
 
-.addBtn:hover {
-    outline: none;
-}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */
