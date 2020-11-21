@@ -1,57 +1,22 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
+import { Context } from '../Context'
 
 function Styles() {
+    const { allSongs } = useContext(Context);
+    const mappingStyle = allSongs.map(song => song.style)
+    const filterStyles = [...new Set(mappingStyle)];
+
     return (
         <section>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Salegy
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Reggae
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Folk
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Rap
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Rock
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Pop
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    CEDM; ‎R&B
-                </Link>
-            </p>
-            <p>
-                <Link to="/styles">
-                    <i className="ri-headphone-fill"></i>
-                    Hiram-pitiavana
-                </Link>
-            </p>
+            {filterStyles.map((style, i) => (
+                <p key={style + i}>
+                    <Link to={`/styles/${style}`}>
+                        <i className="ri-headphone-fill"></i>
+                        {style}
+                    </Link>
+                </p>
+            ))}
         </section>
     )
 }

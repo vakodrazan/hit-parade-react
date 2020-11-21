@@ -34115,7 +34115,7 @@ function Header() {
 
 var _default = Header;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/Styles.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/StyleList.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34123,51 +34123,70 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _react = _interopRequireDefault(require("react"));
+var _react = _interopRequireWildcard(require("react"));
 
 var _reactRouterDom = require("react-router-dom");
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function StyleList() {
+  const {
+    styleName
+  } = (0, _reactRouterDom.useParams)();
+  const {
+    allSongs
+  } = (0, _react.useContext)(_Context.Context);
+  const filterSameStyle = allSongs.filter(song => song.style === styleName);
+  console.log(filterSameStyle);
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("i", {
+    className: "ri-headphone-fill"
+  }), styleName), filterSameStyle.map(item => /*#__PURE__*/_react.default.createElement("div", {
+    key: item.id
+  }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("span", null, item.name))));
+}
+
+var _default = StyleList;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Context":"Context.js"}],"Components/Styles.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+var _reactRouterDom = require("react-router-dom");
+
+var _Context = require("../Context");
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
 function Styles() {
-  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
+  const {
+    allSongs
+  } = (0, _react.useContext)(_Context.Context);
+  const mappingStyle = allSongs.map(song => song.style);
+  const filterStyles = [...new Set(mappingStyle)];
+  return /*#__PURE__*/_react.default.createElement("section", null, filterStyles.map((style, i) => /*#__PURE__*/_react.default.createElement("p", {
+    key: style + i
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/styles/${style}`
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-headphone-fill"
-  }), "Salegy")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Reggae")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Folk")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Rap")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Rock")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Pop")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "CEDM; \u200ER&B")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/styles"
-  }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-headphone-fill"
-  }), "Hiram-pitiavana")));
+  }), style))));
 }
 
 var _default = Styles;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js"}],"Components/CartItem.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","../Context":"Context.js"}],"Components/CartItem.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -34400,6 +34419,8 @@ var _Add = _interopRequireDefault(require("./Components/Add"));
 
 var _Header = _interopRequireDefault(require("./Components/Header"));
 
+var _StyleList = _interopRequireDefault(require("./Components/StyleList"));
+
 var _Styles = _interopRequireDefault(require("./Components/Styles"));
 
 var _Cart = _interopRequireDefault(require("./pages/Cart"));
@@ -34419,15 +34440,18 @@ function App() {
   }, /*#__PURE__*/_react.default.createElement(_Cart.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/add"
   }, /*#__PURE__*/_react.default.createElement(_Add.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    exact: true,
     path: "/styles"
   }, /*#__PURE__*/_react.default.createElement(_Styles.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
     path: "/song/:songId"
-  }, /*#__PURE__*/_react.default.createElement(_LyricsSong.default, null))));
+  }, /*#__PURE__*/_react.default.createElement(_LyricsSong.default, null)), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Route, {
+    path: "/styles/:styleName"
+  }, /*#__PURE__*/_react.default.createElement(_StyleList.default, null))));
 }
 
 var _default = App;
 exports.default = _default;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Add":"Components/Add.js","./Components/Header":"Components/Header.js","./Components/Styles":"Components/Styles.js","./pages/Cart":"pages/Cart.js","./pages/LyricsSong":"pages/LyricsSong.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/esm/react-router-dom.js","./Components/Add":"Components/Add.js","./Components/Header":"Components/Header.js","./Components/StyleList":"Components/StyleList.js","./Components/Styles":"Components/Styles.js","./pages/Cart":"pages/Cart.js","./pages/LyricsSong":"pages/LyricsSong.js","./pages/Songs":"pages/Songs.js"}],"index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
