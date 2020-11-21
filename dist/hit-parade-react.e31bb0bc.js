@@ -34128,7 +34128,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Header() {
   return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "song-list"
+    className: "section-layout"
   }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "\uD83D\uDD25 Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
@@ -34173,7 +34173,8 @@ function StyleList() {
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-headphone-fill"
   }), styleName), filterSameStyle.map(item => /*#__PURE__*/_react.default.createElement("div", {
-    key: item.id
+    key: item.id,
+    className: "song-list"
   }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("span", null, item.name))));
 }
 
@@ -34236,7 +34237,9 @@ function CartItem({
   const {
     removeFromCart
   } = (0, _react.useContext)(_Context.Context);
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("i", {
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "song-list section-layout"
+  }, /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => removeFromCart(song.id),
     className: "ri-delete-bin-line"
   }), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, song.price));
@@ -34317,7 +34320,9 @@ function LyricsSong() {
     songId
   } = (0, _reactRouterDom.useParams)();
   const songLyrics = allSongs.find(song => song.id === Number(songId));
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.name, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "song-list"
+  }, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.name, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
 }
 
 var _default = LyricsSong;
@@ -34372,28 +34377,28 @@ function SongList({
     if (isALreadyInCart) {
       return /*#__PURE__*/_react.default.createElement("i", {
         onClick: () => removeFromCart(song.id),
-        className: "ri-shopping-cart-2-fill"
+        className: "ri-shopping-cart-2-fill icon-fill"
       });
     }
 
     return /*#__PURE__*/_react.default.createElement("i", {
       onClick: () => addToCart(song),
-      className: "ri-shopping-cart-2-line"
+      className: "ri-shopping-cart-2-line icon-lightblue"
     });
   }
 
   return /*#__PURE__*/_react.default.createElement("section", {
-    className: "song-list"
+    className: "song-list section-layout"
   }, /*#__PURE__*/_react.default.createElement("span", null, favouriteIcon()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => toggleUpvote(song.id),
     className: "ri-arrow-up-line"
   })), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.downvote), /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => toggleDownvote(song.id),
-    className: "ri-arrow-down-line fav"
+    className: "ri-arrow-down-line"
   })), /*#__PURE__*/_react.default.createElement("span", null, cartIcon()), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/song/${song.id}`
   }, /*#__PURE__*/_react.default.createElement("i", {
-    className: "ri-more-fill"
+    className: "ri-more-fill icon-lightblue"
   }))));
 }
 

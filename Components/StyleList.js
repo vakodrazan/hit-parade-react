@@ -14,7 +14,7 @@ function StyleList() {
                 {styleName}
             </h2>
             {filterSameStyle.map(item => (
-                <div key={item.id}>
+                <div key={item.id} className="song-list">
                     <h3>{item.title}</h3>
                     <span>{item.name}</span>
                 </div>

@@ -5,7 +5,7 @@ function CartItem({song}) {
     const { removeFromCart } = useContext(Context);
 
     return (
-        <div>
+        <div className="song-list section-layout">
             <i 
                 onClick={() => removeFromCart(song.id)} 
                 className="ri-delete-bin-line"

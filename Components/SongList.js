@@ -35,20 +35,20 @@ function SongList({song}) {
             return (
                 <i 
                     onClick={() => removeFromCart(song.id)}
-                    className="ri-shopping-cart-2-fill"
+                    className="ri-shopping-cart-2-fill icon-fill"
                 ></i>
             )
         }
         return (
             <i 
                 onClick={() => addToCart(song)} 
-                className="ri-shopping-cart-2-line"
+                className="ri-shopping-cart-2-line icon-lightblue"
             ></i>
         )
     }
 
     return (
-        <section className="song-list">
+        <section className="song-list section-layout">
             <span>
                 {favouriteIcon()}
             </span>
@@ -63,14 +63,14 @@ function SongList({song}) {
             </p>
             <p>
                 <span>{song.downvote}</span>
-                <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line fav"></i>
+                <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line"></i>
             </p>
             <span>
                 {cartIcon()}
             </span>
             <span>
                 <Link to={`/song/${song.id}`}>
-                    <i className="ri-more-fill"></i>
+                    <i className="ri-more-fill icon-lightblue"></i>
                 </Link>
             </span>
         </section>

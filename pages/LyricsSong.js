@@ -9,7 +9,7 @@ function LyricsSong() {
     const songLyrics = allSongs.find(song => song.id === Number(songId));
 
     return (
-        <div>
+        <div className="song-list">
             <h2>{songLyrics.name}: {songLyrics.title}</h2>
             <p>{songLyrics.lyrics}</p>
         </div>
