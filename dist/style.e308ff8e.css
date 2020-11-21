@@ -159,4 +159,9 @@ textarea {
     padding-left: 10px;
 }
 
+.lyrics {
+    max-width: 50%;
+    line-height: 1.5;
+}
+
 /*# sourceMappingURL=/style.e308ff8e.css.map */

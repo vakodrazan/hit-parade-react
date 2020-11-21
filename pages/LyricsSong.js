@@ -13,7 +13,7 @@ function LyricsSong() {
             <h2>{songLyrics.name}: {songLyrics.title}</h2>
             <div className="song-list">
                 <h3>Lyrics</h3>
-                <p>{songLyrics.lyrics}</p>
+                <p className="lyrics">{songLyrics.lyrics}</p>
             </div>
 
         </section>
