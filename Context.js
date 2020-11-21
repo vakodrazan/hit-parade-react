@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import songs from "./songs.json";
 
 const Context = React.createContext();

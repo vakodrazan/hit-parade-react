@@ -4,6 +4,7 @@ import Add from './Components/Add';
 import Header from './Components/Header';
 import Styles from './Components/Styles';
 import Cart from './pages/Cart';
+import LyricsSong from './pages/LyricsSong';
 import Songs from './pages/Songs';
 
 function App() {
@@ -18,11 +19,14 @@ function App() {
                 <Route path="/cart">
                     <Cart />
                 </Route>
+                <Route path="/add">
+                    <Add />
+                </Route>
                 <Route path="/styles">
                     <Styles />
                 </Route>
-                <Route path="/add">
-                    <Add />
+                <Route path="/song/:songId">
+                    <LyricsSong />
                 </Route>
             </Switch>
         </div>

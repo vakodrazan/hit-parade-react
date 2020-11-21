@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Link } from 'react-router-dom';
 import { Context } from '../Context'
 
 function SongList({song}) {
@@ -68,7 +69,9 @@ function SongList({song}) {
                 {cartIcon()}
             </span>
             <span>
-                <i className="ri-more-fill"></i>
+                <Link to={`/song/${song.id}`}>
+                    <i className="ri-more-fill"></i>
+                </Link>
             </span>
         </section>
     )
