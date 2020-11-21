@@ -11,6 +11,12 @@ p {
     padding: 10px;
 }
 
+header {
+    color: black;
+    padding-bottom: 2rem;
+    font-size: 24px;
+}
+
 h1,
 h2,
 h3,
@@ -21,6 +27,11 @@ h4 {
 
 a {
     text-decoration: none;
+    color: currentColor;
+}
+
+a:hover {
+    font-weight: 700;
 }
 
 button {
@@ -92,7 +103,7 @@ i {
 }
 
 .add-form {
-    background-color: rgb(253, 234, 253);
+    background-color: rgb(13, 83, 214);
     padding: 1rem;
     border-radius: 5px;
     -webkit-box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.57); 
@@ -107,7 +118,7 @@ fieldset {
 
 .add-field {
     width: 100%;
-    background-color: #BAE8E8;
+    background-color: #fff;
     border-radius: 5px;
     border: none;
     height: 3rem;
@@ -123,18 +134,27 @@ textarea {
 
 textarea {
     width: 100%;
-    background-color: #BAE8E8;
+    background-color: #fff;
     border-radius: 5px;
     border: none;
 }
 
 .addBtn {
-    background-color: rgb(178, 190, 7);
+    background-color: #ff01ff;
     color: white;
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
 }
 
+.genre {
+    font-weight: 600;
+    color: rgb(5, 5, 158);
+    font-size: 2rem;
+}
+
+.genre span {
+    padding-left: 10px;
+}
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

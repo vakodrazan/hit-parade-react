@@ -34013,7 +34013,7 @@ function ContextProvider({
     const form = e.target;
     const title = form.title.value;
     const name = form.name.value;
-    const price = form.price.value;
+    const price = Number(form.price.value);
     const style = form.style.value;
     const lyrics = form.lyrics.value;
     if (!title) return;
@@ -34083,7 +34083,7 @@ function Add() {
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
     className: "add-field",
     name: "price",
-    type: "text",
+    type: "number",
     placeholder: "Price",
     required: true
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
@@ -34212,12 +34212,13 @@ function Styles() {
   const mappingStyle = allSongs.map(song => song.style);
   const filterStyles = [...new Set(mappingStyle)];
   return /*#__PURE__*/_react.default.createElement("section", null, filterStyles.map((style, i) => /*#__PURE__*/_react.default.createElement("p", {
-    key: style + i
+    key: style + i,
+    className: "genre"
   }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/styles/${style}`
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-headphone-fill"
-  }), style))));
+  }), /*#__PURE__*/_react.default.createElement("span", null, style)))));
 }
 
 var _default = Styles;

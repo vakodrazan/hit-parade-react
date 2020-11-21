@@ -10,10 +10,10 @@ function Styles() {
     return (
         <section>
             {filterStyles.map((style, i) => (
-                <p key={style + i}>
+                <p key={style + i} className="genre">
                     <Link to={`/styles/${style}`}>
                         <i className="ri-headphone-fill"></i>
-                        {style}
+                        <span>{style}</span>
                     </Link>
                 </p>
             ))}
