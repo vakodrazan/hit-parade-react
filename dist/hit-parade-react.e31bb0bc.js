@@ -33922,7 +33922,36 @@ function ContextProvider({
   children
 }) {
   const [allSongs, setAllSongs] = (0, _react.useState)(_songs.default);
-  const [cartItem, setCartItem] = (0, _react.useState)([]); // Update favourite icon
+  const [cartItem, setCartItem] = (0, _react.useState)([]);
+
+  function initAllSongs() {
+    const lsAllsong = JSON.parse(localStorage.getItem("allSongs"));
+
+    if (lsAllsong) {
+      setAllSongs(lsAllsong);
+    }
+  }
+
+  function initCartItem() {
+    const lsCartItem = JSON.parse(localStorage.getItem("cartItem"));
+
+    if (lsCartItem) {
+      setCartItem(lsCartItem);
+    }
+  }
+
+  (0, _react.useEffect)(() => {
+    initAllSongs();
+    initCartItem();
+  }, []);
+  (0, _react.useEffect)(() => {
+    if (allSongs.length > 0) {
+      localStorage.setItem("allSongs", JSON.stringify(allSongs));
+    }
+  }, [allSongs]);
+  (0, _react.useEffect)(() => {
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+  }, [cartItem]); // Update favourite icon
 
   function toggleFavourite(id) {
     const newSongArr = allSongs.map(song => {
@@ -34393,8 +34422,14 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 function Songs() {
   const {
     allSongs
-  } = (0, _react.useContext)(_Context.Context);
-  return /*#__PURE__*/_react.default.createElement("article", null, allSongs.map(song => /*#__PURE__*/_react.default.createElement(_SongList.default, {
+  } = (0, _react.useContext)(_Context.Context); // sort the list from the highest to the lowest (upvote - downvote)
+
+  const sortSongs = allSongs.sort((itemA, itemB) => {
+    const songA = itemA.upvote - itemA.downvote;
+    const songB = itemB.upvote - itemB.downvote;
+    return songB - songA;
+  });
+  return /*#__PURE__*/_react.default.createElement("article", null, sortSongs.map(song => /*#__PURE__*/_react.default.createElement(_SongList.default, {
     key: song.id,
     song: song
   })));

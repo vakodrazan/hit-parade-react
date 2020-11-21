@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import songs from "./songs.json";
 
 const Context = React.createContext();
@@ -6,6 +6,35 @@ const Context = React.createContext();
 function ContextProvider({children}) {
     const [allSongs, setAllSongs] = useState(songs);
     const [cartItem, setCartItem] = useState([]);
+
+    function initAllSongs() {
+        const lsAllsong = JSON.parse(localStorage.getItem("allSongs"));
+        if (lsAllsong) {
+            setAllSongs(lsAllsong);
+        }
+    }
+
+    function initCartItem() {
+        const lsCartItem = JSON.parse(localStorage.getItem("cartItem"));
+        if (lsCartItem) {
+            setCartItem(lsCartItem)
+        }
+    }
+
+    useEffect(() => {
+        initAllSongs();
+        initCartItem()
+    }, [])
+
+    useEffect(() => {
+        if (allSongs.length > 0) {
+            localStorage.setItem("allSongs", JSON.stringify(allSongs))
+        }
+    }, [allSongs]);
+
+    useEffect(() => {
+        localStorage.setItem("cartItem", JSON.stringify(cartItem));
+    }, [cartItem])
 
     // Update favourite icon
     function toggleFavourite(id) {
