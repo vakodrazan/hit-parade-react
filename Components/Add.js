@@ -1,22 +1,22 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext } from 'react'
 import { Context } from '../Context'
 
 function Add() {
     const { addNewSong } = useContext(Context);
 
     return (
-        <form onSubmit={addNewSong}>
+        <form onSubmit={addNewSong} className="add-form">
             <fieldset>
-                <input name="title" type="text" placeholder="Title" required/>
+                <input className="add-field" name="title" type="text" placeholder="Title" required/>
             </fieldset>
             <fieldset>
-                <input name="name" type="text" placeholder="Artist" required/>
+                <input className="add-field" name="name" type="text" placeholder="Artist" required/>
             </fieldset>
             <fieldset>
-                <input name="price" type="text" placeholder="Price" required/>
+                <input className="add-field" name="price" type="text" placeholder="Price" required/>
             </fieldset>
             <fieldset>
-                <select name="style">
+                <select className="add-field" name="style">
                     <option value="">Style</option>
                     <option value="Salegy">Salegy</option>
                     <option value="Reggae">Reggae</option>
@@ -28,9 +28,9 @@ function Add() {
                 </select>
             </fieldset>
             <fieldset>
-                <textarea name="lyrics" type="text" placeholder="Lyrics"  required/>
+                <textarea rows="12" name="lyrics" type="text" placeholder="Lyrics"  required/>
             </fieldset>
-            <button type="submit">Add</button>
+            <button className="addBtn" type="submit">Add</button>
         </form>
     )
 }

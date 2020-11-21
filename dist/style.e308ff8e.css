@@ -23,6 +23,10 @@ a {
     text-decoration: none;
 }
 
+button {
+    opacity: 0.8;
+}
+
 .section-layout {
     display: flex;
     flex-direction: row;
@@ -84,6 +88,50 @@ i {
         max-width: 750px;
         margin: auto;
     }
+}
+
+.add-form {
+    
+}
+
+fieldset {
+    border: none;
+    max-width: 80%;
+}
+
+.add-field {
+    width: 100%;
+    background-color: #BAE8E8;
+    border-radius: 5px;
+    border: none;
+    height: 3rem;
+    padding: 0 10px;
+}
+
+input,
+button,
+textarea {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+textarea {
+    width: 100%;
+    background-color: #BAE8E8;
+    border-radius: 5px;
+    border: none;
+}
+
+.addBtn {
+    background-color: rgb(178, 190, 7);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+}
+
+.addBtn:hover {
+    outline: none;
 }
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

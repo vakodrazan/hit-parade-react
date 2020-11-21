@@ -34066,23 +34066,28 @@ function Add() {
     addNewSong
   } = (0, _react.useContext)(_Context.Context);
   return /*#__PURE__*/_react.default.createElement("form", {
-    onSubmit: addNewSong
+    onSubmit: addNewSong,
+    className: "add-form"
   }, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    className: "add-field",
     name: "title",
     type: "text",
     placeholder: "Title",
     required: true
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    className: "add-field",
     name: "name",
     type: "text",
     placeholder: "Artist",
     required: true
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+    className: "add-field",
     name: "price",
     type: "text",
     placeholder: "Price",
     required: true
   })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
+    className: "add-field",
     name: "style"
   }, /*#__PURE__*/_react.default.createElement("option", {
     value: ""
@@ -34101,11 +34106,13 @@ function Add() {
   }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Hiram-pitiavana"
   }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+    rows: "12",
     name: "lyrics",
     type: "text",
     placeholder: "Lyrics",
     required: true
   })), /*#__PURE__*/_react.default.createElement("button", {
+    className: "addBtn",
     type: "submit"
   }, "Add"));
 }
@@ -34543,7 +34550,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58032" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53743" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
