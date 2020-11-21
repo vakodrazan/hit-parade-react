@@ -34105,7 +34105,15 @@ function Add() {
     value: "CEDM; \u200ER&B"
   }, "CEDM; \u200ER&B"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Hiram-pitiavana"
-  }, "Hiram-pitiavana"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+  }, "Hiram-pitiavana"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Slow"
+  }, "Slow"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Country"
+  }, "Country"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Rock"
+  }, "Rock"), /*#__PURE__*/_react.default.createElement("option", {
+    value: "Others"
+  }, "Others"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
     rows: "12",
     name: "lyrics",
     type: "text",

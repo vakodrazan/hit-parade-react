@@ -25,6 +25,10 @@ function Add() {
                     <option value="Pop">Pop</option>
                     <option value="CEDM; ‎R&B">CEDM; ‎R&B</option>
                     <option value="Hiram-pitiavana">Hiram-pitiavana</option>
+                    <option value="Slow">Slow</option>
+                    <option value="Country">Country</option>
+                    <option value="Rock">Rock</option>
+                    <option value="Others">Others</option>
                 </select>
             </fieldset>
             <fieldset>
