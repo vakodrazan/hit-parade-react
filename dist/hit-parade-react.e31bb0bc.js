@@ -34345,9 +34345,9 @@ function LyricsSong() {
     songId
   } = (0, _reactRouterDom.useParams)();
   const songLyrics = allSongs.find(song => song.id === Number(songId));
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return /*#__PURE__*/_react.default.createElement("section", null, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.name, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("div", {
     className: "song-list"
-  }, /*#__PURE__*/_react.default.createElement("h2", null, songLyrics.name, ": ", songLyrics.title), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, "Lyrics"), /*#__PURE__*/_react.default.createElement("p", null, songLyrics.lyrics)));
 }
 
 var _default = LyricsSong;
