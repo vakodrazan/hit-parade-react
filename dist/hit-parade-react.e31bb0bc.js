@@ -34388,10 +34388,12 @@ function StyleList() {
   const filterSameStyle = allSongs.filter(song => song.style === styleName);
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-headphone-fill"
-  }), styleName), filterSameStyle.map(item => /*#__PURE__*/_react.default.createElement("div", {
-    key: item.id,
+  }), styleName), filterSameStyle.map(item => /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: `/song/${item.id}`,
+    key: item.id
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "song-list"
-  }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("span", null, item.name))));
+  }, /*#__PURE__*/_react.default.createElement("h3", null, item.title), /*#__PURE__*/_react.default.createElement("span", null, item.name)))));
 }
 
 var _default = StyleList;

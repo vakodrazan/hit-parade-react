@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { Context } from '../Context';
 
 function StyleList() {
@@ -14,10 +14,12 @@ function StyleList() {
                 {styleName}
             </h2>
             {filterSameStyle.map(item => (
-                <div key={item.id} className="song-list">
-                    <h3>{item.title}</h3>
-                    <span>{item.name}</span>
-                </div>
+                <Link to={`/song/${item.id}`} key={item.id}>
+                    <div className="song-list">
+                        <h3>{item.title}</h3>
+                        <span>{item.name}</span>
+                    </div>
+                </Link>
             ))}
         </div>
     )
