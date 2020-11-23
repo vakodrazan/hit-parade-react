@@ -33862,7 +33862,7 @@ module.exports = [{
   "isFavorite": false,
   "upvote": 640,
   "downvote": 230,
-  "price": 3900,
+  "price": 100,
   "lyrics": `I'm going under and this time I fear there's no one to save me
             This all or nothing really got a way of driving me crazy
             I need somebody to heal
@@ -33922,7 +33922,7 @@ module.exports = [{
   "isFavorite": false,
   "upvote": 24,
   "downvote": 4,
-  "price": 28500,
+  "price": 200,
   "lyrics": `Staring at a stop sign
         Watching people drive by
         T. Mac on the radio
@@ -33988,7 +33988,7 @@ module.exports = [{
   "isFavorite": false,
   "upvote": 320,
   "downvote": 21,
-  "price": 21000,
+  "price": 250,
   "lyrics": `Oh, you need to slow it down, get on my vibe
         We got some catching up to do, woah
         Whatever's on your mind, leave it outside, oh-yeah
@@ -34045,7 +34045,7 @@ module.exports = [{
   "isFavorite": false,
   "upvote": 35,
   "downvote": 10,
-  "price": 5000,
+  "price": 100,
   "lyrics": `Kalo, nofy, tsiky Ho entinao ho ahy, anatiko any Rava ireo manda manodidina ahy Ahoana no anaovanao izany e! Toa misy afo mamaivay ny masonao Manainga ahy ho sahisahy Mampatsiahy ahy hoe hay olon'afaka aho Ekenao ny maha izaho ahy. A a a! ah! ah! hay! Sambatra aho Manana anao A a a! ah! ah! a! Asandratro avo Ny feoko hanambara hoe: Tiako ianao!!! tiako ianao Ny feoko hanambara hoe Tiako ianao. Tiako ny mihaino ny feonao Mitondra ahy Lavitr'izao tontolo izao Tontolo izay namboarinao ho ahy. Ary misy afo mamaivay manafana Izay narehitrao ho antsika Ary ny manodidina azy no hizarana Izay rehetra any anatintsika. A a a! ah! ah! hay! Sambatra aho Manana anao A a a! ah! ah! a! Asandratro avo. Ny feoko hanambara hoe: Tiako ianao. Tiako ianao Ny feoko hanambara hoe Tiako ianao. Na ny rano lalina aza Tsy hahaleo ny fitiavana Izay mamatotra ahy aminao Tsy misy azo atao. Hay! hay aihay hay! Haaah ah ah ah hay hay! Ah ah ah ah hay hay! Ah ah ah ah!! Ah ah ah ah!! A a a! ah! ah! hay! Sambatra aho Manana anao A a a! ah! ah! a! Asandratro avo. Ny feoko hanambara hoe: Tiako ianao!!! tiako ianao Izao rehetra izao hahalala hoe: Tiako ianao!!! tiako ianao Izao rehetra izao hahalala hoe tiako ianao. Oh oh oh oh oh ooh! oh oh oh oh oooh!`
 }, {
   "title": "Fearless",
@@ -34055,7 +34055,7 @@ module.exports = [{
   "isFavorite": false,
   "upvote": 450,
   "downvote": 10,
-  "price": 5000,
+  "price": 100,
   "lyrics": `I wake up
         I feel it
         Those fears are back again
@@ -34762,7 +34762,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58157" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60348" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
