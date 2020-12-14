@@ -61,6 +61,10 @@ button:hover {
     border-radius: 5px;
 }
 
+.song-list p {
+    padding: 1px;
+}
+
 i {
     cursor: pointer;
 }
