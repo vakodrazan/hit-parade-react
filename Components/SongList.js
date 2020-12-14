@@ -57,14 +57,16 @@ function SongList({song}) {
                 <h3>{song.title}</h3>
                 <span>{song.name}</span>
             </div>
-            <p>
-                <span>{song.upvote}</span>
-                <i onClick={() => toggleUpvote(song.id)} className="ri-arrow-up-line"></i>
-            </p>
-            <p>
-                <span>{song.downvote}</span>
-                <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line"></i>
-            </p>
+            <div className="votes">
+                <div>
+                    <span>{song.upvote}</span>
+                    <i onClick={() => toggleUpvote(song.id)} className="ri-arrow-up-line"></i>
+                </div>
+                <div>
+                    <span>{song.downvote}</span>
+                    <i onClick={() => toggleDownvote(song.id)} className="ri-arrow-down-line"></i>
+                </div>
+            </div>
             <span>
                 {cartIcon()}
             </span>

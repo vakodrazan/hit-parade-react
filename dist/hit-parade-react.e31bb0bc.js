@@ -34434,13 +34434,15 @@ function SongList({
 
   return /*#__PURE__*/_react.default.createElement("section", {
     className: "song-list section-layout"
-  }, /*#__PURE__*/_react.default.createElement("span", null, favouriteIcon()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {
+  }, /*#__PURE__*/_react.default.createElement("span", null, favouriteIcon()), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h3", null, song.title), /*#__PURE__*/_react.default.createElement("span", null, song.name)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "votes"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", null, song.upvote), /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => toggleUpvote(song.id),
     className: "ri-arrow-up-line"
-  })), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement("span", null, song.downvote), /*#__PURE__*/_react.default.createElement("i", {
+  })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", null, song.downvote), /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => toggleDownvote(song.id),
     className: "ri-arrow-down-line"
-  })), /*#__PURE__*/_react.default.createElement("span", null, cartIcon()), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }))), /*#__PURE__*/_react.default.createElement("span", null, cartIcon()), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/song/${song.id}`
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-more-fill icon-lightblue"

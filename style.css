@@ -47,10 +47,22 @@ button:hover {
 }
 
 .section-layout {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: .5fr 2fr 1fr .5fr .5fr;
+    gap: 5px;
     align-items: center;
+}
+
+.votes {
+    display: grid;
+    gap: 10px;
+}
+
+@media (min-width: 650px) {
+    .votes {
+        display: flex;
+        gap: 10px;
+    }
 }
 
 article.songs {
