@@ -20,6 +20,7 @@
  - Show the song lyrics when I click the three dots.
  - I can favourite any song I want.
  - When I add more song in the cart I can see the total price for them.
+ - Also, I can delete any song I want which I don't like to be in the list.
  - This is the process when the user buy the song by clicking the buy button. The `textContent` of the button should change into `In process`. After a while , the textContent should be back to what it was before and the cart list should be empty.
 - I save it in local storage so that I can see where I have left before
 
