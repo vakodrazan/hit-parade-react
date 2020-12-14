@@ -53,13 +53,19 @@ button:hover {
     align-items: center;
 }
 
+.action-button span {
+    font-size: 20px;
+    color: red;
+}
+
+.action-button,
 .votes {
     display: grid;
     gap: 10px;
 }
 
 @media (min-width: 650px) {
-    .votes {
+    .votes, .action-button {
         display: flex;
         gap: 10px;
     }

@@ -9,7 +9,8 @@ function SongList({song}) {
         toggleDownvote, 
         cartItem,
         addToCart,
-        removeFromCart
+        removeFromCart,
+        removeItem
     } = useContext(Context);
 
     function favouriteIcon() {
@@ -70,10 +71,13 @@ function SongList({song}) {
             <span>
                 {cartIcon()}
             </span>
-            <span>
+            <span className="action-button">
                 <Link to={`/song/${song.id}`}>
                     <i className="ri-more-fill icon-lightblue"></i>
                 </Link>
+                <span>
+                    <i onClick={() => removeItem(song.id)} className="ri-delete-bin-line"></i>
+                </span>
             </span>
         </section>
     )

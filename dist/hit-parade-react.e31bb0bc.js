@@ -34041,6 +34041,11 @@ function ContextProvider({
     e.target.reset();
   }
 
+  function removeItem(id) {
+    const findItemToDelete = allSongs.filter(song => song.id !== id);
+    setAllSongs(findItemToDelete);
+  }
+
   return /*#__PURE__*/_react.default.createElement(Context.Provider, {
     value: {
       allSongs,
@@ -34051,7 +34056,8 @@ function ContextProvider({
       addToCart,
       removeFromCart,
       emptyCart,
-      addNewSong
+      addNewSong,
+      removeItem
     }
   }, children);
 }
@@ -34399,7 +34405,8 @@ function SongList({
     toggleDownvote,
     cartItem,
     addToCart,
-    removeFromCart
+    removeFromCart,
+    removeItem
   } = (0, _react.useContext)(_Context.Context);
 
   function favouriteIcon() {
@@ -34442,10 +34449,15 @@ function SongList({
   })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("span", null, song.downvote), /*#__PURE__*/_react.default.createElement("i", {
     onClick: () => toggleDownvote(song.id),
     className: "ri-arrow-down-line"
-  }))), /*#__PURE__*/_react.default.createElement("span", null, cartIcon()), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }))), /*#__PURE__*/_react.default.createElement("span", null, cartIcon()), /*#__PURE__*/_react.default.createElement("span", {
+    className: "action-button"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: `/song/${song.id}`
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-more-fill icon-lightblue"
+  })), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("i", {
+    onClick: () => removeItem(song.id),
+    className: "ri-delete-bin-line"
   }))));
 }
 

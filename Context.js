@@ -107,6 +107,11 @@ function ContextProvider({children}) {
         e.target.reset();
     }
 
+    function removeItem(id) {
+        const findItemToDelete = allSongs.filter(song => song.id !== id);
+        setAllSongs(findItemToDelete)
+    }
+
 
     return <Context.Provider 
         value={{
@@ -118,7 +123,8 @@ function ContextProvider({children}) {
             addToCart,
             removeFromCart,
             emptyCart,
-            addNewSong
+            addNewSong,
+            removeItem
         }}
     >
         {children}
