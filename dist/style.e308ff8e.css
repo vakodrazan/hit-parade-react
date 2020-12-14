@@ -163,7 +163,6 @@ select {
 }
 
 .add-field {
-    width: 100%;
     background-color: #fff;
     border-radius: 5px;
     border: none;
@@ -188,6 +187,7 @@ textarea {
 .addBtn {
     background-color: #ff01ff;
     color: white;
+    width: 90px;
     border-radius: 5px;
     border: none;
     padding: 10px 20px;
