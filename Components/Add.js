@@ -32,7 +32,7 @@ function Add() {
                 </select>
             </fieldset>
             <fieldset>
-                <textarea rows="12" name="lyrics" type="text" placeholder="Lyrics"  required/>
+                <textarea rows="12" name="lyrics" type="text" placeholder="Lyrics" required/>
             </fieldset>
             <button className="addBtn" type="submit">Add</button>
         </form>

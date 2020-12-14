@@ -59,6 +59,9 @@ button:hover {
     padding: 1rem;
     margin-bottom: 2rem;
     border-radius: 5px;
+
+    /* Jump to next line everytime, there is a new line */
+    white-space: pre-line;
 }
 
 .song-list p {
