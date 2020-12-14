@@ -34159,7 +34159,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Header() {
   return /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("h1", null, "Hit Parade"), /*#__PURE__*/_react.default.createElement("div", {
-    className: "section-layout"
+    className: "header"
   }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
   }, "Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
