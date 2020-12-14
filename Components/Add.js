@@ -6,16 +6,9 @@ function Add() {
 
     return (
         <form onSubmit={addNewSong} className="add-form">
-            <fieldset>
                 <input className="add-field" name="title" type="text" placeholder="Title" required/>
-            </fieldset>
-            <fieldset>
                 <input className="add-field" name="name" type="text" placeholder="Artist" required/>
-            </fieldset>
-            <fieldset>
                 <input className="add-field" name="price" type="number" placeholder="Price" required/>
-            </fieldset>
-            <fieldset>
                 <select className="add-field" name="style">
                     <option value="">Style</option>
                     <option value="Salegy">Salegy</option>
@@ -30,10 +23,7 @@ function Add() {
                     <option value="Rock">Rock</option>
                     <option value="Others">Others</option>
                 </select>
-            </fieldset>
-            <fieldset>
                 <textarea rows="12" name="lyrics" type="text" placeholder="Lyrics" required/>
-            </fieldset>
             <button className="addBtn" type="submit">Add</button>
         </form>
     )

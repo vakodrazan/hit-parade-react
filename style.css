@@ -53,14 +53,18 @@ button:hover {
     align-items: center;
 }
 
+article.songs {
+    display: grid;
+    gap: 20px;
+}
+
 .song-list {
     color: white;
     background-color: #272343;
     padding: 1rem;
-    margin-bottom: 2rem;
     border-radius: 5px;
 
-    /* Jump to next line everytime, there is a new line */
+    /* Jump to next line everytime, there is a new line</p></div><br></br><div><p> */
     white-space: pre-line;
 }
 
@@ -114,15 +118,21 @@ i {
 .add-form {
     background-color: rgb(13, 83, 214);
     padding: 1rem;
+    display: grid;
+    gap: 16px;
     border-radius: 5px;
     -webkit-box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.57); 
     box-shadow: 3px 3px 4px 5px rgba(0,0,0,0.57);
 }
 
-fieldset {
+input {
+    max-width: 97%;
+}
+
+input,
+textarea,
+select {
     border: none;
-    max-width: 90%;
-    padding: 1rem 0;
 }
 
 .add-field {

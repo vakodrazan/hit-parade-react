@@ -13,7 +13,7 @@ function Songs() {
     });
 
     return (
-        <article>
+        <article className="songs">
             {sortSongs.map(song => (
                 <SongList key={song.id} song={song} />
             ))}

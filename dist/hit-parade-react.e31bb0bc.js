@@ -34078,25 +34078,25 @@ function Add() {
   return /*#__PURE__*/_react.default.createElement("form", {
     onSubmit: addNewSong,
     className: "add-form"
-  }, /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+  }, /*#__PURE__*/_react.default.createElement("input", {
     className: "add-field",
     name: "title",
     type: "text",
     placeholder: "Title",
     required: true
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+  }), /*#__PURE__*/_react.default.createElement("input", {
     className: "add-field",
     name: "name",
     type: "text",
     placeholder: "Artist",
     required: true
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("input", {
+  }), /*#__PURE__*/_react.default.createElement("input", {
     className: "add-field",
     name: "price",
     type: "number",
     placeholder: "Price",
     required: true
-  })), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("select", {
+  }), /*#__PURE__*/_react.default.createElement("select", {
     className: "add-field",
     name: "style"
   }, /*#__PURE__*/_react.default.createElement("option", {
@@ -34123,13 +34123,13 @@ function Add() {
     value: "Rock"
   }, "Rock"), /*#__PURE__*/_react.default.createElement("option", {
     value: "Others"
-  }, "Others"))), /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("textarea", {
+  }, "Others")), /*#__PURE__*/_react.default.createElement("textarea", {
     rows: "12",
     name: "lyrics",
     type: "text",
     placeholder: "Lyrics",
     required: true
-  })), /*#__PURE__*/_react.default.createElement("button", {
+  }), /*#__PURE__*/_react.default.createElement("button", {
     className: "addBtn",
     type: "submit"
   }, "Add"));
@@ -34156,11 +34156,11 @@ function Header() {
     className: "section-layout"
   }, /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/"
-  }, "\uD83D\uDD25 Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Popular songs ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/styles"
-  }, "\uD83D\uDC97 Styles ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Styles ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/add"
-  }, "\uD83D\uDC83 Add ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+  }, "Add ")), /*#__PURE__*/_react.default.createElement("p", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
     to: "/cart"
   }, /*#__PURE__*/_react.default.createElement("i", {
     className: "ri-shopping-cart-fill"
@@ -34479,7 +34479,9 @@ function Songs() {
     const songB = itemB.upvote - itemB.downvote;
     return songB - songA;
   });
-  return /*#__PURE__*/_react.default.createElement("article", null, sortSongs.map(song => /*#__PURE__*/_react.default.createElement(_SongList.default, {
+  return /*#__PURE__*/_react.default.createElement("article", {
+    className: "songs"
+  }, sortSongs.map(song => /*#__PURE__*/_react.default.createElement(_SongList.default, {
     key: song.id,
     song: song
   })));
